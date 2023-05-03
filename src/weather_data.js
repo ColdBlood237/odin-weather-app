@@ -3,7 +3,8 @@ function weather_data() {
 
   async function fetch_weather_data(location) {
     let response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=8c76b9fbf906405186e162024230205&q=${location}&aqi=no&alerts=no`
+      `http://api.weatherapi.com/v1/current.json?key=8c76b9fbf906405186e162024230205&q=${location}&aqi=no&alerts=no`,
+      { mode: "cors" }
     );
     let json = await response.json();
 
