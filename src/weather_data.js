@@ -9,8 +9,10 @@ function weather_data() {
 
     if (response.ok) {
       Object.assign(data, weather_data_factory(json));
+      document.querySelector(".error").innerHTML = "";
     } else {
-      console.log(data.error);
+      console.log(json.error.message);
+      document.querySelector(".error").innerHTML = json.error.message;
     }
   }
 

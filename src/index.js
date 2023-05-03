@@ -12,7 +12,6 @@ let current_unit = "celsius";
 window.onload = async () => {
   city_weather = weather_data();
   await city_weather.fetch_weather_data("Turin");
-  console.log(JSON.stringify(city_weather.data));
   render_weather(city_weather.data, current_unit);
 };
 
