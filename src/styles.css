@@ -55,6 +55,7 @@ body {
 .temp {
   font-size: 12rem;
   margin-top: 0;
+  cursor: pointer;
 }
 
 .temp > sup {
