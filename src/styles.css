@@ -1,4 +1,5 @@
 body {
+  font-family: sans-serif;
   position: relative;
   background-image: url(https://images.wallpaperscraft.com/image/single/stars_space_dark_139528_1920x1080.jpg);
   color: white;
@@ -29,4 +30,54 @@ body {
   margin-top: 8px;
   font-size: 1.3rem;
   padding-left: 8px;
+}
+
+.weather-info {
+  position: absolute;
+  top: 20vh;
+  left: 10%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: start;
+  align-items: end;
+  gap: 16px;
+}
+
+.weather-info > div {
+  height: fit-content;
+}
+
+.weather-info div:nth-child(3),
+.weather-info div:nth-child(4) {
+  height: 200px;
+}
+
+.temp {
+  font-size: 12rem;
+  margin-top: 0;
+}
+
+.temp > sup {
+  font-size: 5rem;
+}
+
+.condition-icon > img {
+  align-self: flex-end;
+  width: 100px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.weather-info div:first-child {
+  font-size: 2rem;
+}
+
+.location,
+.condition-text {
+  margin: 0;
 }

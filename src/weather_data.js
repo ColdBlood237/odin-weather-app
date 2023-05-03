@@ -1,5 +1,3 @@
-import render_error_msg from "./render_error";
-
 function weather_data() {
   let data = {};
 
@@ -11,11 +9,8 @@ function weather_data() {
 
     if (response.ok) {
       Object.assign(data, weather_data_factory(json));
-      console.log(document.querySelector(".error"));
-      document.getElementById("city-input").setCustomValidity("");
     } else {
       console.log(data.error);
-      document.getElementById("city-input").setCustomValidity(data.error);
     }
   }
 
